@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
+import me.edsondiaz.unabshop.ui.screens.HomeScreen
 
 @Composable
 fun NavigationAPP() {
@@ -43,11 +44,11 @@ fun NavigationAPP() {
             })
         }
         composable(route = "Home") {
-            HomeScreen(onClickLogout ={
-                mynavController.navigate("login"){
+            HomeScreen(onClickLogout = {
+                mynavController.navigate("login") {
                     popUpTo(0)
                 }
-            } )
+            })
         }
 
 
